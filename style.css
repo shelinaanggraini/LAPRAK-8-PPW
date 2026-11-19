@@ -1,0 +1,294 @@
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #A6BCC9;
+    color: #3D1534;
+    min-height: 100vh;
+    padding: 35px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    background-color: #3E4B8E;
+    color: #FFF4EB;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 22px;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #F6E0B6;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.header-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #FFF4EB;
+}
+
+/* Layout utama */
+.main-content {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #FFF4EB;
+    width: 230px;
+    min-width: 230px;
+    padding: 22px;
+    border-radius: 16px;
+}
+
+.sidebar h3 {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.menu-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #F6E0B6;
+    color: #3D1534;
+    padding: 13px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.menu-btn:hover {
+    background-color: #A6BCC9;
+}
+
+.menu-btn.active {
+    background-color: #3E4B8E;
+    color: #FFF4EB;
+}
+
+/* Area konten */
+.content {
+    flex: 1;
+    background-color: #FFF4EB;
+    padding: 30px;
+    border-radius: 16px;
+    min-width: 0;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: #3E4B8E;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #3D1534;
+}
+
+/* Input */
+.form-group {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #A6BCC9;
+    border-radius: 9px;
+    background-color: #FFF4EB;
+    font-size: 14px;
+    color: #3D1534;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #3E4B8E;
+}
+
+/* Tombol */
+.primary-btn {
+    border: none;
+    padding: 13px 20px;
+    background-color: #3E4B8E;
+    color: #FFF4EB;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #3D1534;
+}
+
+.secondary-btn {
+    border: 1px solid #3E4B8E;
+    padding: 13px 20px;
+    background-color: #F6E0B6;
+    color: #3D1534;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.secondary-btn:hover {
+    background-color: #A6BCC9;
+}
+
+.game-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Kalkulator */
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.operation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.operation-btn {
+    border: 1px solid #A6BCC9;
+    background-color: #F6E0B6;
+    color: #3D1534;
+    padding: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.operation-btn span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #3E4B8E;
+}
+
+.operation-btn:hover {
+    background-color: #A6BCC9;
+}
+
+/* Hasil */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #A6BCC9;
+    color: #3D1534;
+    font-size: 14px;
+    line-height: 1.7;
+    display: none;
+}
+
+.result.show {
+    display: block;
+}
+
+/* Tebak angka */
+.game-info {
+    background-color: #F6E0B6;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 16px;
+    color: #3D1534;
+    font-size: 12px;
+    background-color: #FFF4EB;
+    border-radius: 10px;
+}
+
+/* Tampilan mobile */
+@media (max-width: 700px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .header {
+        padding: 23px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .content {
+        padding: 22px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .operation-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
